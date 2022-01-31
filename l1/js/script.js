@@ -1,17 +1,15 @@
 
 
-const chiledNodeI = document.body;
-const ss = chiledNodeI.childNodes;
+const b = document.body;
+const p = b.previousSibling;
+const n = b.nextSibling;
+const p1 = p.parentNode;
+
+let res = confirm("aaa or bbb");
+console.log(res);
 
 
-
-
-
-for(let node of ss){
-    console.log(node);
-}
-
-
-
-
-
+/*
+console.log(p);
+console.log(n);
+console.log(p1);*/
