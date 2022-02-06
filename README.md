@@ -1,1 +1,3 @@
-# JS-study
+# JS-studyn
+only test-project
+

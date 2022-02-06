@@ -10,16 +10,24 @@
 
 <body>
     <div class="wrapper">
-        <button class="btn">Click</button>
+        <button class="btn">Click1</button>
+        <button class="btn">Click2</button>
+        <button class="btn">Click3</button>
+        <button class="btn">Click4</button>
     </div>
+
     <script>
 
+        const buttons = document.querySelector('.btn');
 
-        const button = document.querySelector('.btn');
-        button.addEventListener('click', function () {
-            console.log('click');
-        })
+        const handleClick = (event) => {
+            console.log(event.target)
+        }
 
+
+       buttons.forEach(button => {
+           button.addEventListener('click',handleClick)
+       })
     </script>
 </body>
 
