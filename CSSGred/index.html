@@ -5,54 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Святой Грааль</title>
-   <!--flex:  flex-grow, flex-shrink и flex-basis; -->
-   <style>
-      * {
-        box-sizing: border-box;
+    <!--flex:  flex-grow, flex-shrink и flex-basis; -->
+    <style>
+      .wrapper {
+        display: flex;
+        align-items: center;
+        background-color: beige;
+        height: 100vh;
       }
-
+      .wrapper > div {
+        padding: 20px;
+        font-size: 4vw;
+        color: white;
+      }
+      .red {
+        background: orangered;
+      }
+      .green {
+        background: yellowgreen;
+      }
+      .blue {
+        background: steelblue;
+      }
       body {
         margin: 0;
-      }
-      #main {
-        display: flex;
-        min-height: calc(100ch - 40vh);
-      }
-      #main > article {
-        flex: 1;
-      }
-      #main > nav,
-      #main > aside {
-        flex: 0 0 20vw;
-        background: beige;
-      }
-
-      #main > nav {
-        order: -1;
-      }
-
-      header,
-      footer,
-      article,
-      nav,
-      aside {
-        padding: 1em;
-      }
-
-      header,
-      footer {
-        background: yellow;
-        height: 20vh;
       }
     </style>
   </head>
   <body>
-    <header>Had</header>
-    <div id="main">
-      <article>Article</article>
-      <nav>Navigation</nav>
-      <aside>Side bar</aside>
+    <div class="wrapper">
+      <div class="red">1</div>
+      <div class="green">2</div>
+      <div class="blue">3</div>
     </div>
-    <footer>Footer</footer>
   </body>
 </html>
