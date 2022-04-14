@@ -95,7 +95,6 @@ console.log('13px' < '14');
 
 //const sum = (a, b) => { return a + b }
 
-
 /*
 let sum = (q, yes, no) = (confirm(q)) ? 
 () => yes() : 
@@ -158,10 +157,6 @@ function fibo(n) {
   return count;
 }
 */
-
-
-
-
 
 /*var calculate = function(nums){
 	var sum = 0;
@@ -235,7 +230,6 @@ function checkCoupon(enteredCode, correctCode, currentDate, expirationDate){
  let longDate2 = new Date(expirationDate);
  return (enteredCode === correctCode && longDate1 <= longDate2) ? true : false;  
 }
-*/
 
 alert(Number.NEGATIVE_INFINITY)
 
@@ -248,5 +242,40 @@ function find_max(nums){
   }
   return max_num;
 }
+*/
 
+// https://velog.io/@hemtory/CodeWars20210412 Arefmeticeskaya posledowatelnost
+function getParticipants(handshakes) {
+  if (!handshakes) return 1;
 
+  let answer = 0;
+  let sum = 0;
+
+  while (handshakes > sum) {
+    sum = (answer * (answer + 1)) / 2;
+
+    answer++;
+  }
+
+  return answer;
+}
+
+alert(getParticipants(10))
+/*
+Если вы посмотрите правило, каждый раз, когда количество людей увеличивается на одного, оно увеличивается в виде иерархической последовательности.
+
+Что такое арифметическая последовательность?
+
+Если арифметическая последовательность имеет постоянную разность между каждой последовательностью, арифметическая последовательность означает, что разность между элементами последовательности является арифметической последовательностью.
+
+EX)
+арифметическая последовательность: 0, 1, 2, 3, 4, ...
+Разница между элементами последовательности постоянна как 1.
+
+Арифметическая последовательность: 0, 1, 3, 6, 10, ...
+Разница между элементами последовательности равна 1, 2, 3, 4, ... и обладает свойством арифметической последовательности
+
+В задаче каждый элемент равен сумме арифметической прогрессии с разностью 1.
+
+Поэтому, во-первых, когда он равен 0, он равен 1, используя то, что есть в примере, а когда он равен return1 и более, можно найти ответ, используя сумму арифметической последовательности.
+*/
